@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="city_name_validate">Please enter city name properly</string>
+    <string name="us_city_validate">Please enter US city name</string>
+    <string name="str_min">Min</string>
+    <string name="str_max">Max</string>
+    <string name="str_celsius">°C</string>
+    <string name="str_humidity">Humidity</string>
+    <string name="str_pressure">Pressure</string>
+    <string name="str_wind">Wind</string>
+    <string name="str_percent">%</string>
+    <string name="str_mb">mb</string>
+    <string name="str_kmh">km/h</string>
+</resources>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_30"
+        android:background="@color/edittext_bg_color"
+        app:cardCornerRadius="@dimen/margin_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/SearchInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/edittext_bg_color"
+            android:hint="Enter city, country code here"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:padding="@dimen/margin_5"
+            app:endIconDrawable="@drawable/ic_search"
+            app:endIconMode="custom"
+            app:endIconTint="@color/black"
+            app:hintTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/SearchInputEdittext"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/edittext_bg_color"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textCursorDrawable="@drawable/cursor_color">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/weatherView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_30"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="@dimen/margin_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/margin_20">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewCityName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/textViewTempIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewCityName"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewCityWeather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewCityName"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_toRightOf="@+id/textViewTempIcon"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewCityTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewCityWeather"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_toRightOf="@+id/textViewTempIcon"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewCityMinMaxTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewCityTemp"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_toRightOf="@+id/textViewTempIcon"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewCityHumidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewCityMinMaxTemp"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_toRightOf="@+id/textViewTempIcon"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewCityPressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewCityHumidity"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_toRightOf="@+id/textViewTempIcon"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewCityWind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewCityPressure"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_toRightOf="@+id/textViewTempIcon"
+                android:textColor="@color/black" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
